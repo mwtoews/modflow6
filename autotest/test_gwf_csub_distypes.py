@@ -83,7 +83,7 @@ def get_interbed(modelgrid):
     ifno = 0
     ini_stress = 0.0
 
-    nodes = [node for node in range(ia[0], ia[1])]
+    nodes = list(range(ia[0], ia[1]))
     if grid_type == "structured":
         cellids = modelgrid.get_lrc(nodes)
     elif grid_type == "vertex":

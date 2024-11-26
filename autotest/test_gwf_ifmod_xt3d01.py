@@ -424,7 +424,7 @@ def check_output(idx, test):
     fpth = os.path.join(test.workspace, "gwf_obs.csv")
     with open(fpth) as f:
         lines = f.readlines()
-    obsnames = [name for name in lines[0].strip().split(",")[1:]]
+    obsnames = list(lines[0].strip().split(",")[1:])
     obsvalues = [float(v) for v in lines[1].strip().split(",")[1:]]
 
     # Extract the gwf-gwf flows stored in parent budget file
@@ -456,7 +456,7 @@ def check_output(idx, test):
     fpth = os.path.join(test.workspace, "gwf_obs_boundnames.csv")
     with open(fpth) as f:
         lines = f.readlines()
-    obsnames = [name for name in lines[0].strip().split(",")[1:]]
+    obsnames = list(lines[0].strip().split(",")[1:])
     obsvalues = [float(v) for v in lines[1].strip().split(",")[1:]]
     assert np.allclose(
         obsvalues, [-50.0, 50.0, 0, 0.0]

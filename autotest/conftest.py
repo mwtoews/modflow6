@@ -61,7 +61,7 @@ def targets() -> Dict[str, Path]:
     official release.
     """
 
-    d = dict()
+    d = {}
     for k, v in _binaries["development"]:
         # require development binaries
         assert v.is_file(), f"Couldn't find binary '{k}' expected at: {v}"

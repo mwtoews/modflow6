@@ -84,7 +84,7 @@ imsla = "BICGSTAB"
 # chd data
 c = []
 c6 = []
-ccol = [j for j in range(ncol)]
+ccol = list(range(ncol))
 for j in ccol:
     c.append([0, 0, j, strt, strt])
     c6.append([(0, 0, j), strt])

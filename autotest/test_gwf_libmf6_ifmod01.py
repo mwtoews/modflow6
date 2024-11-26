@@ -262,7 +262,7 @@ def check_interface_models(mf6):
     bot = mf6.get_value_ptr(mem_addr)
     zc = (bot + top) / 2
     assert all(
-        [zc[i] >= zc[i + 1] for i in range(len(zc) - 1)]
+        zc[i] >= zc[i + 1] for i in range(len(zc) - 1)
     ), f"Interface model for {name_left} contains incorrectly numbered cells"
 
     # confirm some properties for the 'left' interface

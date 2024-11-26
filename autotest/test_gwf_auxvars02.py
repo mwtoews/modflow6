@@ -75,8 +75,8 @@ def build_models(idx, test):
 
     # chd files
     chdlist0 = []
-    chdlist0.append([(0, 0, 0), 100.0] + [a for a in range(100)])
-    chdlist0.append([(0, nrow - 1, ncol - 1), 95.0] + [a for a in range(100)])
+    chdlist0.append([(0, 0, 0), 100.0] + list(range(100)))
+    chdlist0.append([(0, nrow - 1, ncol - 1), 95.0] + list(range(100)))
 
     chdspdict = {0: chdlist0}
     chd = flopy.mf6.ModflowGwfchd(
